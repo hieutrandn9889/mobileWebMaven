@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("person-repository.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("test.feature");
 formatter.feature({
   "line": 1,
   "name": "hieutran",
@@ -30,68 +30,24 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "StepDefinitions.i_am_on_ZingPoll_website()"
+  "location": "test.i_hello_worldaa()"
 });
 formatter.result({
-  "duration": 146293356,
+  "duration": 91497632,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinitions.i_click_the_SignIn_button()"
+  "location": "test.i_hello_worldbb()"
 });
 formatter.result({
-  "duration": 66559,
+  "duration": 106815,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinitions.i_input_username_and_password()"
+  "location": "test.i_hello_worldcc()"
 });
 formatter.result({
-  "duration": 472905,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 8,
-  "name": "hieutest123",
-  "description": "",
-  "id": "hieutran;hieutest123",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 9,
-  "name": "I hello world1",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 10,
-  "name": "I hello world2",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 11,
-  "name": "I hello world3",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "StepDefinitions.i_am_on_ZingPoll_website1()"
-});
-formatter.result({
-  "duration": 148874,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepDefinitions.i_click_the_SignIn_button2()"
-});
-formatter.result({
-  "duration": 669769,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepDefinitions.i_input_username_and_password3()"
-});
-formatter.result({
-  "duration": 94537,
+  "duration": 77767,
   "status": "passed"
 });
 });

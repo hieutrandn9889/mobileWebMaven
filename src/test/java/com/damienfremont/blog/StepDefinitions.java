@@ -1,13 +1,8 @@
 package com.damienfremont.blog;
-
-import org.apache.log4j.pattern.LogEvent;
-import org.apache.log4j.xml.DOMConfigurator;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 public class StepDefinitions {
-	
-	LogEvent LOG;
+
 
 		@Given("^I hello worldaa")
 		public void i_am_on_ZingPoll_website() {
