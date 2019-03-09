@@ -1,9 +1,11 @@
 /Users/hieu/Desktop/mobileWebMaven/src/test/java/commons/AbstractMobile.java
 /Users/hieu/Desktop/mobileWebMaven/src/test/java/commons/Constants.java
 /Users/hieu/Desktop/mobileWebMaven/src/test/java/commons/LogEvent.java
-/Users/hieu/Desktop/mobileWebMaven/src/test/java/stepdefinations/Test/test.java
 /Users/hieu/Desktop/mobileWebMaven/src/test/java/commons/AbstractTest.java
 /Users/hieu/Desktop/mobileWebMaven/src/test/java/utility/Hook.java
 /Users/hieu/Desktop/mobileWebMaven/src/test/java/commons/AbstractPage.java
 /Users/hieu/Desktop/mobileWebMaven/src/test/java/commons/AutomationControl.java
 /Users/hieu/Desktop/mobileWebMaven/src/test/java/runner/Runner.java
+/Users/hieu/Desktop/mobileWebMaven/src/test/java/stepdefinations/ZP/TC_RegisterPageSteps_ZP.java
+/Users/hieu/Desktop/mobileWebMaven/src/test/java/ZP_pages/ZingPoll_PageFactory.java
+/Users/hieu/Desktop/mobileWebMaven/src/test/java/ZP_pages/ZingPoll_HomePage.java

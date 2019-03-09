@@ -10,11 +10,12 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		strict = false, 
-		features = "features",
+//		features = "features",
+		features = { "features/ZP/RegisterTo_ZP_Scenario.feature" }, 
 		format = { "pretty","html:target/site/cucumber-pretty",
 					"json:target/json/cucumber.json" },
-		glue = { "stepdefinations","utility" }
-//		tags = {"@Chrome"}
+		glue = { "stepdefinations","utility" },
+		tags = {"@Chrome"}
 )
 @Test
 public class Runner extends AbstractTestNGCucumberTests {
