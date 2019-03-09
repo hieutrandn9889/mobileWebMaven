@@ -19,4 +19,4 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @Test
 public class Runner extends AbstractTestNGCucumberTests {
 
-		}
+}

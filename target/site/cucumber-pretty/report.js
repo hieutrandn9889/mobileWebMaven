@@ -33,21 +33,21 @@ formatter.match({
   "location": "test.i_hello_worldaa()"
 });
 formatter.result({
-  "duration": 91497632,
+  "duration": 94475696,
   "status": "passed"
 });
 formatter.match({
   "location": "test.i_hello_worldbb()"
 });
 formatter.result({
-  "duration": 106815,
+  "duration": 119282,
   "status": "passed"
 });
 formatter.match({
   "location": "test.i_hello_worldcc()"
 });
 formatter.result({
-  "duration": 77767,
+  "duration": 59088,
   "status": "passed"
 });
 });
