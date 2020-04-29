@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/ZP/RegisterTo_ZP_Scenario.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/ZP/Register_ZP_Scenario.feature");
 formatter.feature({
   "line": 1,
   "name": "Register to ZingPoll",
@@ -16,7 +16,7 @@ formatter.scenarioOutline({
   "tags": [
     {
       "line": 4,
-      "name": "@Chrome"
+      "name": "@Firefox"
     }
   ]
 });
@@ -61,7 +61,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 2331351974,
+  "duration": 7678197564,
   "status": "passed"
 });
 formatter.scenario({
@@ -74,7 +74,7 @@ formatter.scenario({
   "tags": [
     {
       "line": 4,
-      "name": "@Chrome"
+      "name": "@Firefox"
     }
   ]
 });
@@ -101,14 +101,14 @@ formatter.match({
   "location": "TC_RegisterPageSteps_ZP.i_am_on_ZingPoll_website()"
 });
 formatter.result({
-  "duration": 4100138697,
+  "duration": 6118481883,
   "status": "passed"
 });
 formatter.match({
   "location": "TC_RegisterPageSteps_ZP.i_click_the_SignIn_button()"
 });
 formatter.result({
-  "duration": 5193122910,
+  "duration": 5376962820,
   "status": "passed"
 });
 formatter.match({
@@ -125,11 +125,11 @@ formatter.match({
   "location": "TC_RegisterPageSteps_ZP.i_input_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 4482822033,
+  "duration": 4265157369,
   "status": "passed"
 });
 formatter.after({
-  "duration": 251898872,
+  "duration": 3799747488,
   "status": "passed"
 });
 });

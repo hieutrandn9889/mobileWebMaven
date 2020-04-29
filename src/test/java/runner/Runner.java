@@ -11,7 +11,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		strict = false, 
 //		features = "features",
-		features = { "features/ZP/RegisterTo_ZP_Scenario.feature" }, 
+		features = { "features/ZP/Register_ZP_Scenario.feature" }, 
 		format = { "pretty","html:target/site/cucumber-pretty",
 					"json:target/json/cucumber.json" },
 		glue = { "stepdefinations","utility" },

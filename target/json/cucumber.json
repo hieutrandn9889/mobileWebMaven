@@ -6,11 +6,11 @@
         "before": [
           {
             "result": {
-              "duration": 2331351974,
+              "duration": 7678197564,
               "status": "passed"
             },
             "match": {
-              "location": "Hook.setUpChrome()"
+              "location": "Hook.setUpFirefox()"
             }
           }
         ],
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 251898872,
+              "duration": 3799747488,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4100138697,
+              "duration": 6118481883,
               "status": "passed"
             },
             "line": 6,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 5193122910,
+              "duration": 5376962820,
               "status": "passed"
             },
             "line": 7,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 4482822033,
+              "duration": 4265157369,
               "status": "passed"
             },
             "line": 8,
@@ -86,7 +86,7 @@
         "tags": [
           {
             "line": 4,
-            "name": "@Chrome"
+            "name": "@Firefox"
           }
         ]
       }
@@ -95,6 +95,6 @@
     "description": "I want to registered successfull",
     "id": "register-to-zingpoll",
     "keyword": "Feature",
-    "uri": "features/ZP/RegisterTo_ZP_Scenario.feature"
+    "uri": "features/ZP/Register_ZP_Scenario.feature"
   }
 ]

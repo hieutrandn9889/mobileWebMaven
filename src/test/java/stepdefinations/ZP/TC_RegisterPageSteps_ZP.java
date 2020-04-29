@@ -2,7 +2,7 @@ package stepdefinations.ZP;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
-
+import commons.Constants;
 import ZP_pages.ZingPoll_HomePage;
 import ZP_pages.ZingPoll_PageFactory;
 import commons.AbstractTest;
@@ -21,10 +21,9 @@ public class TC_RegisterPageSteps_ZP extends AbstractTest {
 		
 //		driver.get(Constants.ZINGPOLL_URL);
 		homePage.openZingPollPage();
-		DOMConfigurator.configure("..//Web_Mobi_Maven_Java_POM/resource/log4j.xml");
+		DOMConfigurator.configure(Constants.LOG4J);
 		LOG = new LogEvent();
 		LOG.info("ACTIVITY SCREEN: " + showActivityScreen());
-		
 		homePage = ZingPoll_PageFactory.getHomePage(driver);
 		LOG.info("Open the Home page");
 	}
