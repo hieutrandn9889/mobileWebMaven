@@ -10,13 +10,3 @@ Feature: Register to ZingPoll
     Examples: 
       | username               | password |
       | hieutrandn01@gmail.com |   123456 |
-      
-  @Chrome
-  Scenario Outline: Register with empty new user11
-    Given I am on ZingPoll website
-    Then I click the SignIn button
-    Then I input username <username> and password <password>
-
-    Examples: 
-      | username               | password |
-      | hieutrandn01@gmail.com |   123456 |
