@@ -7,11 +7,10 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
 <script type="text/javascript" src="js/Chart.min.js"></script>
-<script type="text/javascript" src="js/moment.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
-<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
 <link rel="stylesheet" href="css/font-awesome.min.css"/>
 <link rel="shortcut icon" href="images/favicon.png"/>
 
@@ -41,8 +40,9 @@ $(document).ready(function() {
 
 
 
+
   
-<title>Cucumber Reports (no 42) - Features Overview</title>
+<title>Cucumber-JVM Reports  - Features Overview</title>
 
 
   <script type="text/javascript">
@@ -51,7 +51,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                3,
+                6,
                 0,
                 0,
                 0,
@@ -74,15 +74,15 @@ $(document).ready(function() {
         ]
     };
 
-    var context = document.getElementById("steps-chart");
-    window.myBar = new Chart(context, {
-        type: "doughnut",
+    var ctx = document.getElementById("steps-chart");
+    window.myBar = new Chart(ctx, {
+        type: 'doughnut',
         data: chartData,
         options: {
             title: {
                 display: true,
                 fontSize: 20,
-                text: "Steps"
+                text: 'Steps'
             },
             responsive: true,
             legend: {
@@ -94,8 +94,8 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 3) / 100;
-                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 6) / 100;
+                        return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
             }
@@ -107,7 +107,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                1,
+                2,
                 0
             ],
             backgroundColor: [
@@ -121,15 +121,15 @@ $(document).ready(function() {
         ]
     };
 
-    var context = document.getElementById("scenarios-chart");
-    window.myBar = new Chart(context, {
-        type: "doughnut",
+    var ctx = document.getElementById("scenarios-chart");
+    window.myBar = new Chart(ctx, {
+        type: 'doughnut',
         data: chartData,
         options: {
             title: {
                 display: true,
                 fontSize: 20,
-                text: "Scenarios"
+                text: 'Scenarios'
             },
             circumference: Math.PI,
             rotation: Math.PI,
@@ -144,8 +144,8 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
-                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
+                        return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
             }
@@ -171,15 +171,15 @@ $(document).ready(function() {
         ]
     };
 
-    var context = document.getElementById("features-chart");
-    window.myBar = new Chart(context, {
-        type: "pie",
+    var ctx = document.getElementById("features-chart");
+    window.myBar = new Chart(ctx, {
+        type: 'pie',
         data: chartData,
         options: {
             title: {
                 display: true,
                 fontSize: 20,
-                text: "Features"
+                text: 'Features'
             },
             responsive: true,
             legend: {
@@ -192,7 +192,7 @@ $(document).ready(function() {
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
                         var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
-                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                        return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
             }
@@ -207,49 +207,47 @@ $(document).ready(function() {
 <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
   <div class="container-fluid">
     <div class="collapse navbar-collapse">
-      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
       <ul class="nav navbar-nav navbar-right">
-                <li role="presentation"  class="active" ><a href="overview-features.html">Features</a></li>
-        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
-        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
-                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+                <li role="presentation"  class="active" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-
-<div class="container-fluid">
-  <div class="col-md-5 col-md-offset-1">
-    
-<table class="table table-bordered" id="build-info">
-  <thead>
-    <tr>
-      <th>Project</th>
-              <th>Number</th>
-            <th>Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="info">
-      <td>cucumber-jvm-example</td>
-              <td>42</td>
-            <td>12 Mar 2019, 11:23</td>
-    </tr>
-  </tbody>
-</table>
-
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>cucumber-jvm-example</td>
+                          <td>42</td>
+                        <td>30 Apr 2020, 14:14</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <div class="col-md-3 col-md-offset-2">
-      </div>
 </div>
 
-
-<div id="report-lead" class="container-fluid">
-  <div class="col-md-10 col-md-offset-1">
-    <h2>Features Statistics</h2>
-          <p>The following graphs show passing and failing statistics for features</p>
-      </div>
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Features Statistics</h2>
+              <p>The following graphs show passing and failing statistics for features</p>
+          </div>
+  </div>
 </div>
 
 
@@ -295,54 +293,48 @@ $(document).ready(function() {
   <br>
 
 
-<div class="container-fluid" id="report">
+<div class="container-fluid" id="summary">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      
+              
 <table id="tablesorter" class="stats-table table-hover">
-  
-<thead>
+  <thead>
   <tr class="header dont-sort">
         <th></th>
-    <th colspan="6">Steps</th>
     <th colspan="3">Scenarios</th>
-    <th colspan="2">Features</th>
+    <th colspan="6">Steps</th>
+    <th colspan="2">Totals</th>
   </tr>
   <tr>
     <th>Feature</th>
         <th class="passed">Passed</th>
     <th class="failed">Failed</th>
+    <th class="total">Total</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
     <th class="skipped">Skipped</th>
     <th class="pending">Pending</th>
     <th class="undefined">Undefined</th>
     <th class="total">Total</th>
-
-    <th class="passed">Passed</th>
-    <th class="failed">Failed</th>
-    <th class="total">Total</th>
-
     <th>Duration</th>
     <th>Status</th>
   </tr>
 </thead>
 
-
   <tbody>
           <tr>
-        <td class="tagname"><a href="report-feature_features-ZP-Register_ZP_Scenario-feature.html">Register to ZingPoll</a></td>
+        <td class="tagname"><a href="features-ZP-Register_ZP_Scenario-feature.html">Register to ZingPoll</a></td>
         
-        <td      class="passed"    >3</td>
+        <td  class="passed"    >2</td>
+        <td >0</td>
+        <td class="total">2</td>
+        <td      class="passed"    >6</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">3</td>
-
-        <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
-
-        <td class="duration" data-value="14741467329">14s 741ms</td>
+        <td class="total">6</td>
+        <td class="duration" data-value="33834273126">33s 834ms</td>
         <td class="passed">Passed</td>
       </tr>
       </tbody>
@@ -350,38 +342,36 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td>1</td>
-            <td>3</td>
+            <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>6</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>3</td>
-
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-
-      <td class="duration">14s 741ms</td>
+      <td>6</td>
+      <td class="duration">33s 834ms</td>
       <td></td>
     </tr>
     <tr>
       <td></td>
             <td>100.00%</td>
       <td>0.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
       <td></td>
       <td>100.00%</td>
       <td>0.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
       <td></td>
       <td></td>
-      <td>100.00%</td>
+      <td>0.00%</td>
     </tr>
   </tfoot>
 </table>
 
-    </div>
+          </div>
   </div>
 </div>
 

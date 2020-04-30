@@ -7,11 +7,10 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
 <script type="text/javascript" src="js/Chart.min.js"></script>
-<script type="text/javascript" src="js/moment.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
-<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
 <link rel="stylesheet" href="css/font-awesome.min.css"/>
 <link rel="shortcut icon" href="images/favicon.png"/>
 
@@ -41,8 +40,9 @@ $(document).ready(function() {
 
 
 
+
   
-<title>Cucumber Reports (no 42) - Failures Overview</title>
+<title>Cucumber-JVM Reports  - Failures Overview</title>
 
 </head>
 
@@ -51,86 +51,57 @@ $(document).ready(function() {
 <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
   <div class="container-fluid">
     <div class="collapse navbar-collapse">
-      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
       <ul class="nav navbar-nav navbar-right">
-                <li role="presentation" ><a href="overview-features.html">Features</a></li>
-        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
-        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
-                <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation"  class="active" ><a href="failures-overview.html">Failures</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-
-<div class="container-fluid">
-  <div class="col-md-5 col-md-offset-1">
-    
-<table class="table table-bordered" id="build-info">
-  <thead>
-    <tr>
-      <th>Project</th>
-              <th>Number</th>
-            <th>Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="info">
-      <td>cucumber-jvm-example</td>
-              <td>42</td>
-            <td>12 Mar 2019, 11:23</td>
-    </tr>
-  </tbody>
-</table>
-
-  </div>
-  <div class="col-md-3 col-md-offset-2">
-      </div>
-</div>
-
-
-<div id="report-lead" class="container-fluid">
-  <div class="col-md-10 col-md-offset-1">
-    <h2>Failures Overview</h2>
-          <p>The following summary displays scenarios that failed.</p>
-      </div>
-</div>
-
-
-<div class="container-fluid">
+<div class="container-fluid" id="build-info">
   <div class="row">
-    <div class="col-md-10 col-md-offset-10">
-      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
-        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
-      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
-        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>cucumber-jvm-example</td>
+                          <td>42</td>
+                        <td>30 Apr 2020, 14:14</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
 
-
-<div class="container-fluid" id="report">
+<div id="report-lead" class="container-fluid>
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-
-              <p>You have no failed scenarios in your Cucumber report</p>
-      
-    </div>
+      <h2>Failures Overview</h2>
+              <p>The following summary displays scenarios that failed.</p>
+          </div>
   </div>
 </div>
 
 
-<div class="container-fluid">
+<div class="container-fluid" id="summary">
   <div class="row">
-    <div class="col-md-10 col-md-offset-10">
-      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
-        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
-      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
-        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
-    </div>
+    <div class="col-md-10 col-md-offset-1">
+              <p>You have no failed scenarios in your Cucumber report</p>
+          </div>
   </div>
 </div>
-
 <br>
 
 <nav class="navbar navbar-default" id="footer">
