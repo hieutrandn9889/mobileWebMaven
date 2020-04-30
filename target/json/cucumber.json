@@ -6,11 +6,11 @@
         "before": [
           {
             "result": {
-              "duration": 7678197564,
+              "duration": 2096909046,
               "status": "passed"
             },
             "match": {
-              "location": "Hook.setUpFirefox()"
+              "location": "Hook.setUpChrome()"
             }
           }
         ],
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 3799747488,
+              "duration": 410887758,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6118481883,
+              "duration": 9319296080,
               "status": "passed"
             },
             "line": 6,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 5376962820,
+              "duration": 5355015081,
               "status": "passed"
             },
             "line": 7,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 4265157369,
+              "duration": 4426151629,
               "status": "passed"
             },
             "line": 8,
@@ -86,7 +86,95 @@
         "tags": [
           {
             "line": 4,
-            "name": "@Firefox"
+            "name": "@Chrome"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1370616586,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setUpChrome()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Register with empty new user11",
+        "description": "",
+        "id": "register-to-zingpoll;register-with-empty-new-user11;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 170152252,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.closeDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5052238534,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I am on ZingPoll website",
+            "match": {
+              "location": "TC_RegisterPageSteps_ZP.i_am_on_ZingPoll_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5280454466,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I click the SignIn button",
+            "match": {
+              "location": "TC_RegisterPageSteps_ZP.i_click_the_SignIn_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4401117336,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I input username hieutrandn01@gmail.com and password 123456",
+            "match": {
+              "arguments": [
+                {
+                  "val": "hieutrandn01@gmail.com",
+                  "offset": 17
+                },
+                {
+                  "val": "123456",
+                  "offset": 53
+                }
+              ],
+              "location": "TC_RegisterPageSteps_ZP.i_input_username_and_password(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 14,
+            "name": "@Chrome"
           }
         ]
       }
