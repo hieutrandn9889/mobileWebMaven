@@ -61,7 +61,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 2177807800,
+  "duration": 2945742283,
   "status": "passed"
 });
 formatter.scenario({
@@ -101,14 +101,14 @@ formatter.match({
   "location": "TC_RegisterPageSteps_ZP.i_am_on_ZingPoll_website()"
 });
 formatter.result({
-  "duration": 4765755843,
+  "duration": 5543428616,
   "status": "passed"
 });
 formatter.match({
   "location": "TC_RegisterPageSteps_ZP.i_click_the_SignIn_button()"
 });
 formatter.result({
-  "duration": 5547762288,
+  "duration": 5432809285,
   "status": "passed"
 });
 formatter.match({
@@ -125,11 +125,11 @@ formatter.match({
   "location": "TC_RegisterPageSteps_ZP.i_input_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 4445964441,
+  "duration": 4537365959,
   "status": "passed"
 });
 formatter.after({
-  "duration": 150741330,
+  "duration": 358709428,
   "status": "passed"
 });
 });
