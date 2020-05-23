@@ -51,7 +51,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                4,
+                2,
                 0,
                 0,
                 0,
@@ -94,7 +94,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 4) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -107,7 +107,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                2,
+                1,
                 0
             ],
             backgroundColor: [
@@ -144,7 +144,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -233,7 +233,7 @@ $(document).ready(function() {
           <tr class="info">
             <td>cucumber-jvm-example</td>
                           <td>42</td>
-                        <td>23 May 2020, 15:16</td>
+                        <td>23 May 2020, 23:57</td>
           </tr>
         </tbody>
       </table>
@@ -323,18 +323,18 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="src-test-java-features-ZP-Register_ZP_Scenario-feature.html">Register to ZingPoll</a></td>
+        <td class="tagname"><a href="restAssureScenario-feature.html">Verify different GET operations using Rest-assured</a></td>
         
-        <td  class="passed"    >2</td>
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+        <td      class="passed"    >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
         <td >0</td>
         <td class="total">2</td>
-        <td      class="passed"    >4</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">4</td>
-        <td class="duration" data-value="16301303416">16s 301ms</td>
+        <td class="duration" data-value="1622561190">1s 622ms</td>
         <td class="passed">Passed</td>
       </tr>
       </tbody>
@@ -342,16 +342,16 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td>1</td>
-            <td>2</td>
+            <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>0</td>
       <td>2</td>
-      <td>4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>4</td>
-      <td class="duration">16s 301ms</td>
+      <td class="duration">1s 622ms</td>
       <td></td>
     </tr>
     <tr>

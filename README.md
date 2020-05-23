@@ -5,4 +5,6 @@
 5. mvn verify
 6. target/site/cucumber
 
+# test REST Assured
+1. Start server: json-server --watch db.json
 
