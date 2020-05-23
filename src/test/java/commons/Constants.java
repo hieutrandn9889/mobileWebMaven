@@ -15,8 +15,8 @@ public class Constants {
 	//Mobile API
 	public static final String APP_API = "..//mobileWebMaven/App/ApiDemos.apk";
 	
-	//Mobile Boobytrap
-	public static final String APP_BT = "..//mobileWebMaven/App/BT.apk";
+	//Mobile ProxiPharma
+	public static final String APP_PROXI = "..//mobileWebMaven/App/appProxi.apk";
 	
 	//Mobile SC
 	public static final String APP_SC = "..//mobileWebMaven/App/SC.apk";
@@ -26,7 +26,7 @@ public class Constants {
 	// IOS
 	public static final String IOS_PATH = "..//mobileWebMaven/App/UICatalog.app";
 	public static final String IOS_INTERGRATION_PATH = "..//mobileWebMaven/App/IntegrationApp.app";
-	public static final String IOS_BOODYTRAPP_PATH = "..//mobileWebMaven/App/boobytrapp.app";
+	public static final String IOS_PROXIBOXPHARMA_PATH = "..//mobileWebMaven/App/ProxiboxPharma.app";
 	
 	// Mobile BT
 	public static final String EMAIL_BT = "thu.nguuyen@smartdev.vn";

@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 2945742283,
+              "duration": 1931650699,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 358709428,
+              "duration": 198718675,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5543428616,
+              "duration": 5147955750,
               "status": "passed"
             },
             "line": 6,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 5432809285,
+              "duration": 6678644601,
               "status": "passed"
             },
             "line": 7,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 4537365959,
+              "duration": 4467019007,
               "status": "passed"
             },
             "line": 8,
@@ -89,12 +89,129 @@
             "name": "@Chrome"
           }
         ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 26093440784,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setUpBT()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Register with empty new user",
+        "description": "",
+        "id": "register-to-zingpoll;register-with-empty-new-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7684058,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I checked the proxi",
+            "match": {
+              "location": "TC_RegisterPageSteps_Proxi.i_am_on_ZingPoll_website()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 14,
+            "name": "@AndroidProxi"
+          }
+        ]
       }
     ],
     "name": "Register to ZingPoll",
     "description": "I want to registered successfull",
     "id": "register-to-zingpoll",
     "keyword": "Feature",
-    "uri": "features/ZP/Register_ZP_Scenario.feature"
+    "uri": "src/test/java/features/ZP/Register_ZP_Scenario.feature"
+  }
+]\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat commons.AutomationControl.findElement(AutomationControl.java:12)\n\tat commons.AbstractPage.type(AbstractPage.java:38)\n\tat ZP_pages.ZingPoll_HomePage.typeIntoEmail(ZingPoll_HomePage.java:33)\n\tat stepdefinations.ZP.TC_RegisterPageSteps_ZP.i_input_username_and_password(TC_RegisterPageSteps_ZP.java:41)\n\tat ✽.Then I input username hieutrandn01@gmail.com and password 123456(src/test/java/features/ZP/Register_ZP_Scenario.feature:8)\n",
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "I input username hieutrandn01@gmail.com and password 123456",
+            "match": {
+              "arguments": [
+                {
+                  "val": "hieutrandn01@gmail.com",
+                  "offset": 17
+                },
+                {
+                  "val": "123456",
+                  "offset": 53
+                }
+              ],
+              "location": "TC_RegisterPageSteps_ZP.i_input_username_and_password(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@Chrome"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 18745955890,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setUpBT()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Register with empty new user",
+        "description": "",
+        "id": "register-to-zingpoll;register-with-empty-new-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8907179,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I checked the proxi",
+            "match": {
+              "location": "TC_RegisterPageSteps_Proxi.i_am_on_ZingPoll_website()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 14,
+            "name": "@AndroidProxi"
+          }
+        ]
+      }
+    ],
+    "name": "Register to ZingPoll",
+    "description": "I want to registered successfull",
+    "id": "register-to-zingpoll",
+    "keyword": "Feature",
+    "uri": "src/test/java/features/ZP/Register_ZP_Scenario.feature"
   }
 ]

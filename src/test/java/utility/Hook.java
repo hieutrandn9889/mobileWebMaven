@@ -51,12 +51,12 @@ public class Hook {
 	 System.out.println("-----------------IE Hook------------------");
 	 }
 	 
-	 @Before(value = "@AndroidBT")
+	 @Before(value = "@AndroidProxi")
 		public void setUpBT() throws MalformedURLException {
-			File app = new File(Constants.APP_BT);
+			File app = new File(Constants.APP_PROXI);
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-			cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 4");
+			cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S10");
 			cap.setCapability("platformName", "Android");
 			cap.setCapability("app", app.getAbsolutePath());
 			try {
@@ -162,12 +162,12 @@ public class Hook {
 	@Before(value = "@SimulatorIOS")
 	public void setUpAppiumIOS() throws MalformedURLException {
 		
-		File f=new File(Constants.IOS_BOODYTRAPP_PATH);
+		File f=new File(Constants.IOS_PROXIBOXPHARMA_PATH);
 		DesiredCapabilities cap=new DesiredCapabilities();
-		cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.8.0");
+		cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.1");
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-        cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.4");
-        cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 7");
+        cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "13.4");
+        cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 11 Pro");
         cap.setCapability(MobileCapabilityType.BROWSER_NAME, "");
         cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 50000);
         cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
@@ -186,7 +186,7 @@ public class Hook {
 		
 		File f=new File(Constants.IOS_INTERGRATION_PATH);
 		DesiredCapabilities cap=new DesiredCapabilities();
-		cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.8.0");
+		cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.1");
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Thu's iPhone");
         cap.setCapability(MobileCapabilityType.BROWSER_NAME, "");

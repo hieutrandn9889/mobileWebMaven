@@ -1,6 +1,7 @@
 commons/AutomationControl.class
 commons/LogEvent.class
 runner/Runner.class
+stepdefinations/Proxi/TC_RegisterPageSteps_Proxi.class
 commons/AbstractPage.class
 ZP_pages/ZingPoll_PageFactory.class
 commons/AbstractTest.class

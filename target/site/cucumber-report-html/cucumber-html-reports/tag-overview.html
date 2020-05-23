@@ -49,32 +49,32 @@ $(document).ready(function() {
   $(document).ready(function() {
 
     var chartData = {
-        labels: ["@Chrome"],
+        labels: ["@AndroidProxi","@Chrome"],
         datasets: [
             {
                 label: 'Passed',
                 backgroundColor: "#92DD96",
-                data: [100.00]
+                data: [100.00, 100.00]
             },
             {
                 label: 'Failed',
                 backgroundColor: "#F2928C",
-                data: [0.00]
+                data: [0.00, 0.00]
             },
             {
                 label: 'Skipped',
                 backgroundColor: "#8AF",
-                data: [0.00]
+                data: [0.00, 0.00]
             },
             {
                 label: 'Pending',
                 backgroundColor: "#F5F28F",
-                data: [0.00]
+                data: [0.00, 0.00]
             },
             {
                 label: 'Undefined',
                 backgroundColor: "#F5B975",
-                data: [0.00]
+                data: [0.00, 0.00]
             }
         ]
     };
@@ -135,7 +135,7 @@ $(document).ready(function() {
           <tr class="info">
             <td>cucumber-jvm-example</td>
                           <td>42</td>
-                        <td>30 Apr 2020, 14:58</td>
+                        <td>23 May 2020, 15:16</td>
           </tr>
         </tbody>
       </table>
@@ -192,6 +192,21 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
+        <td class="tagname"><a href="AndroidProxi.html">@AndroidProxi</a></td>
+        
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+        <td      class="passed"    >1</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">1</td>
+        <td class="duration" data-value="7684058">007ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
         <td class="tagname"><a href="Chrome.html">@Chrome</a></td>
         
         <td  class="passed"    >1</td>
@@ -203,24 +218,24 @@ $(document).ready(function() {
         <td >0</td>
         <td >0</td>
         <td class="total">3</td>
-        <td class="duration" data-value="14759482572">14s 759ms</td>
+        <td class="duration" data-value="16293619358">16s 293ms</td>
         <td class="passed">Passed</td>
       </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
-      <td>1</td>
-            <td>1</td>
+      <td>2</td>
+            <td>2</td>
       <td>0</td>
-      <td>1</td>
-      <td>3</td>
-      <td>0</td>
-      <td>0</td>
+      <td>2</td>
+      <td>4</td>
       <td>0</td>
       <td>0</td>
-      <td>3</td>
-      <td class="duration">14s 759ms</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td class="duration">16s 301ms</td>
       <td></td>
     </tr>
     <tr>
