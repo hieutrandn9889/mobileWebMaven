@@ -32,25 +32,23 @@
                 <artifactId>rest-assured</artifactId>
                 <version>${io-rest-assured.version}</version>
                 <scope>test</scope>
-            </dependency>
+        </dependency>
             <!--Added required depeendencies due to : https://github.com/rest-assured/rest-assured/issues/1168 -->
-            <dependency>
+        <dependency>
                 <groupId>io.rest-assured</groupId>
                 <artifactId>rest-assured-common</artifactId>
                 <version>${io-rest-assured.version}</version>
-            </dependency>
-            <dependency>
+        </dependency>
+        <dependency>
                 <groupId>io.rest-assured</groupId>
                 <artifactId>json-path</artifactId>
                 <version>${io-rest-assured.version}</version>
-            </dependency>
-            <dependency>
+        </dependency>
+        <dependency>
                 <groupId>io.rest-assured</groupId>
                 <artifactId>xml-path</artifactId>
                 <version>${io-rest-assured.version}</version>
-            </dependency>
-		
-		
+        </dependency>
 		<dependency>
     		<groupId>org.codehaus.groovy</groupId>
     		<artifactId>groovy-all</artifactId>
