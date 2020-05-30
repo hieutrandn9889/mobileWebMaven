@@ -11,6 +11,7 @@ import io.restassured.http.Header;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseOptions;
 import io.restassured.specification.RequestSpecification;
+
 public class RestAssuredExtension {
 	public static RequestSpecification Request;
 
@@ -22,16 +23,8 @@ public class RestAssuredExtension {
         RequestSpecification requestSpec = builder.build();
         Request = RestAssured.given().spec(requestSpec);
     }
-
-    public static void GetOpsWithPathParameter(String url, Map<String, String> pathParams) {
-        //Act
-        Request.pathParams(pathParams);
-        try {
-            Request.get(new URI(url));
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-    }
+    
+    //
 
     public static ResponseOptions<Response> GetOps(String url) {
         //Act
@@ -41,6 +34,16 @@ public class RestAssuredExtension {
             e.printStackTrace();
         }
         return null;
+    }
+    
+    public static void GetOpsWithPathParameter(String url, Map<String, String> pathParams) {
+        //Act
+        Request.pathParams(pathParams);
+        try {
+            Request.get(new URI(url));
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
     }
 
     public static ResponseOptions<Response> GetOpsWithToken(String url, String token) {

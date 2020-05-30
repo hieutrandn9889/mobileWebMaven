@@ -1,18 +1,21 @@
 package stepdefinations.RestAssured;
 
-import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertThat;
 
-import commons.AbstractPage;
+import commons.RestAssuredExtension;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import io.restassured.response.ResponseOptions;
+import static org.hamcrest.Matchers.hasItem;
 
-public class TC_RestAssuredSteps extends AbstractPage {
+public class TC_RestAssuredSteps{
+	private static ResponseOptions<Response> response;
 
 	@Given("^I perform GET operation for \"([^\"]*)\"$")
 	public void i_perform_GET_operation_for(String url) throws Throwable {
-		given().contentType(ContentType.JSON);
+		response = RestAssuredExtension.GetOps(url);
 	}
 	@And("^I perform GET for the post number \"([^\"]*)\"$")
 	public void i_perform_GET_for_the_post_number(String postNumber) {
@@ -20,8 +23,8 @@ public class TC_RestAssuredSteps extends AbstractPage {
 	}
 	
 	@Then("^I should see the author name as \"([^\"]*)\"$")
-	public void i_should_see_the_author_name_as(String arg1) throws Throwable {
-	  
+	public void i_should_see_the_author_name_as(String authorName) throws Throwable {
+	  assertThat(response.getBody().jsonPath().get("author"), hasItem("hieutran"));
 	}
 	
 	@Then("^I should see the author names$")

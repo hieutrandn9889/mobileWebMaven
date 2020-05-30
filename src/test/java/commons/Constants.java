@@ -29,7 +29,14 @@ public class Constants {
 	public static final String IOS_PROXIBOXPHARMA_PATH = "..//mobileWebMaven/App/ProxiboxPharma.app";
 	
 	// Mobile BT
-	public static final String EMAIL_BT = "thu.nguuyen@smartdev.vn";
+	public static final String EMAIL_BT    = "thu.nguuyen@smartdev.vn";
 	public static final String PASSWORD_BT = "Test@123";
+	
+	//APIConstant
+	public static class ApiMethods {
+        public static String POST   = "POST";
+        public static String GET    = "GET";
+        public static String DELETE = "DELETE";
+    }
 	
 }
