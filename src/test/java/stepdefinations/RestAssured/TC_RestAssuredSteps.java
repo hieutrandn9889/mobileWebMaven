@@ -1,5 +1,6 @@
 package stepdefinations.RestAssured;
 
+import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertThat;
 
 import commons.RestAssuredExtension;
@@ -8,7 +9,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseOptions;
-import static org.hamcrest.Matchers.hasItem;
 
 public class TC_RestAssuredSteps{
 	private static ResponseOptions<Response> response;
