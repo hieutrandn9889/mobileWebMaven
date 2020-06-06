@@ -47,4 +47,18 @@ public class getRestAssured{
 			.statusCode(200)
 			.body("title", hasItems("Selenium by hieutran"));
 	}
+	
+	@Test
+	void test_04_param() {
+		// http://localhost:3000/users?firstName=hieu
+		baseURI = "http://localhost:3000";
+		given()
+			.param("firstName","hieu")
+			.get("/users")
+			.then()
+			.statusCode(200);
+	}
+	
+	
+	
 }

@@ -5,7 +5,8 @@
     <classes>
       <class name="test.postRestAssured">
         <methods>
-          <include name="test_05_delete"/>
+          <include name="test_07_patch_localhost"/>
+          <include name="test_09_delete_localhost"/>
         </methods>
       </class> <!-- test.postRestAssured -->
     </classes>

@@ -1,51 +1,59 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "title": "Selenium by hieutran",
-            "author": "hieutran"
-        },
-        {
-            "id": 2,
-            "title": "Appium by hieutran",
-            "author": "hieutran"
-        },
-        {
-            "id": 21
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "body": "Test rest assured",
-            "postId": 1
-        }
-    ],
-    "profile": {
-        "name": "Jacob"
-    },
-    "address": {
-        "primary": [
-            {
-                "City": "Da Nang",
-                "State": "Da Nang",
-                "Country": "Viet Nam",
-                "PinCode": "12345"
-            },
-            {
-                "City": "HN",
-                "State": "HN",
-                "Country": "Viet Nam",
-                "PinCode": "12345"
-            }
-        ],
-        "secondary": [
-            {
-                "City": "Sai Gon",
-                "State": "Sai Gon",
-                "Country": "Viet Nam",
-                "PinCode": "9876"
-            }
-        ]
+  "users": [
+    {
+      "id": 1,
+      "firstName": "hieu",
+      "lastName": "tran",
+      "subjectId": 1
     }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Selenium by hieutran",
+      "author": "hieutran"
+    },
+    {
+      "id": 2,
+      "title": "Appium by hieutran",
+      "author": "hieutran"
+    },
+    {
+      "id": 21
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Test rest assured",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "Jacob"
+  },
+  "address": {
+    "primary": [
+      {
+        "City": "Da Nang",
+        "State": "Da Nang",
+        "Country": "Viet Nam",
+        "PinCode": "12345"
+      },
+      {
+        "City": "HN",
+        "State": "HN",
+        "Country": "Viet Nam",
+        "PinCode": "12345"
+      }
+    ],
+    "secondary": [
+      {
+        "City": "Sai Gon",
+        "State": "Sai Gon",
+        "Country": "Viet Nam",
+        "PinCode": "9876"
+      }
+    ]
+  }
 }

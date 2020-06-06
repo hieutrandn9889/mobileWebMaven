@@ -85,9 +85,74 @@ public class postRestAssured{
 	@Test
 	void test_05_delete() {
 		when().delete("https://reqres.in/api/users/2")
+		.then().statusCode(204).log().all();
+		
+	}
+	
+	@Test
+	void test_06_post_localhost() {
+		// show json {"firstName"=huyen, "lastName"=phan}
+		JSONObject request = new JSONObject();
+		request.put("firstName","huyen");
+		request.put("lastName","phan");
+		request.put("subjectId", 2);
+		baseURI = "http://localhost:3000";
+		
+		given()
+		.header("Content-Type", "application/json")
+		.contentType(ContentType.JSON)
+		.accept(ContentType.JSON)
+		.body(request.toJSONString())
+		.when().post("/users")
+		.then().statusCode(201).log().all();
+		
+	}
+	
+	@Test
+	void test_07_patch_localhost() {
+		// show json {"firstName"=huyen, "lastName"=phan}
+		JSONObject request = new JSONObject();
+		request.put("lastName","tran");
+
+		baseURI = "http://localhost:3000";
+		
+		given()
+		.header("Content-Type", "application/json")
+		.contentType(ContentType.JSON)
+		.accept(ContentType.JSON)
+		.body(request.toJSONString())
+		.when().patch("/users/2")
 		.then().statusCode(200).log().all();
 		
 	}
+	
+	@Test
+	void test_08_put_localhost() {
+		// show json {"firstName"=huyen, "lastName"=phan}
+		JSONObject request = new JSONObject();
+		request.put("firstName","huyen1");
+		request.put("lastName","phan1");
+		request.put("subjectId", 2);
+		baseURI = "http://localhost:3000";
+		
+		given()
+		.header("Content-Type", "application/json")
+		.contentType(ContentType.JSON)
+		.accept(ContentType.JSON)
+		.body(request.toJSONString())
+		.when().put("/users/2")
+		.then().statusCode(200).log().all();
+		
+	}
+		
+	@Test
+	void test_09_delete_localhost() {
+		baseURI = "http://localhost:3000";
+		when().delete("/users/2")
+		.then().statusCode(200).log().all();
+		
+	}
+	
 	
 	
 }
