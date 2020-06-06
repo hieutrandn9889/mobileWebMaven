@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24" started-at="2020-06-06T05:14:20Z" finished-at="2020-06-06T05:14:20Z">
+  <suite name="ExecuteAutomation" duration-ms="2504" started-at="2020-06-06T15:23:45 ICT" finished-at="2020-06-06T15:23:47 ICT">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.Runner@7113b13f]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="24" started-at="2020-06-06T05:14:20Z" finished-at="2020-06-06T05:14:20Z">
-      <class name="test.postRestAssured">
-        <test-method status="PASS" signature="test_01()[pri:0, instance:test.postRestAssured@3745e5c6]" name="test_01" duration-ms="10" started-at="2020-06-06T12:14:20Z" finished-at="2020-06-06T12:14:20Z">
+    <test name="Window" duration-ms="2504" started-at="2020-06-06T15:23:45 ICT" finished-at="2020-06-06T15:23:47 ICT">
+      <class name="runner.Runner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.Runner@7113b13f]" name="setUpClass" is-config="true" duration-ms="303" started-at="2020-06-06T15:23:45 ICT" finished-at="2020-06-06T15:23:45 ICT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_01 -->
-      </class> <!-- test.postRestAssured -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.Runner@7113b13f]" name="feature" duration-ms="2061" started-at="2020-06-06T15:23:45 ICT" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-06-06T15:23:47 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Verify different GET operations using Rest-assured]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.Runner@7113b13f]" name="tearDownClass" is-config="true" duration-ms="13" started-at="2020-06-06T15:23:47 ICT" finished-at="2020-06-06T15:23:47 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.Runner -->
+    </test> <!-- Window -->
+  </suite> <!-- ExecuteAutomation -->
 </testng-results>
