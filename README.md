@@ -7,4 +7,4 @@
 
 # test REST Assured
 1. Start server: json-server --watch RestAssured/db.json
-
+2. feature >> TC_RestAssuredStep (RestAssuredExtension.GetOps) >> TestInitialize (tạo new RestAssuredExtension) >> commons(RestAssuredExtension)
