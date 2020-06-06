@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 613661381,
+  "duration": 624551041,
   "status": "passed"
 });
 formatter.scenario({
@@ -43,7 +43,7 @@ formatter.match({
   "location": "TC_RestAssuredSteps.i_perform_GET_operation_for(String)"
 });
 formatter.result({
-  "duration": 744689392,
+  "duration": 659038526,
   "status": "passed"
 });
 formatter.match({
@@ -56,7 +56,7 @@ formatter.match({
   "location": "TC_RestAssuredSteps.i_perform_GET_for_the_post_number(String)"
 });
 formatter.result({
-  "duration": 389725602,
+  "duration": 375602705,
   "status": "passed"
 });
 formatter.match({
@@ -69,11 +69,11 @@ formatter.match({
   "location": "TC_RestAssuredSteps.i_should_see_the_author_name_as(String)"
 });
 formatter.result({
-  "duration": 30467698,
+  "duration": 35177579,
   "status": "passed"
 });
 formatter.before({
-  "duration": 2556843,
+  "duration": 3132632,
   "status": "passed"
 });
 formatter.scenario({
@@ -104,18 +104,19 @@ formatter.match({
   "location": "TC_RestAssuredSteps.i_perform_GET_operation_for(String)"
 });
 formatter.result({
-  "duration": 18914243,
+  "duration": 18436878,
   "status": "passed"
 });
 formatter.match({
   "location": "TC_RestAssuredSteps.i_should_see_the_author_names()"
 });
 formatter.result({
-  "duration": 45837551,
-  "status": "passed"
+  "duration": 50425636,
+  "error_message": "java.lang.AssertionError: 1 expectation failed.\nJSON path author doesn\u0027t match.\nExpected: iterable over [\"hieutran\", \"hieutran\", null] in any order\n  Actual: [hieutran, hieutran, hieutran, hieutran1]\n\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)\n\tat io.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:275)\n\tat io.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)\n\tat io.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:258)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:274)\n\tat stepdefinations.RestAssured.BDDStyledMethod.PerformContainsCollection(BDDStyledMethod.java:32)\n\tat stepdefinations.RestAssured.TC_RestAssuredSteps.i_should_see_the_author_names(TC_RestAssuredSteps.java:32)\n\tat ✽.Then I should see the author names(GETPosts.feature:10)\n",
+  "status": "failed"
 });
 formatter.before({
-  "duration": 2067050,
+  "duration": 2645567,
   "status": "passed"
 });
 formatter.scenario({
@@ -146,18 +147,18 @@ formatter.match({
   "location": "TC_RestAssuredSteps.i_perform_GET_operation_for(String)"
 });
 formatter.result({
-  "duration": 15970625,
+  "duration": 12132062,
   "status": "passed"
 });
 formatter.match({
   "location": "TC_RestAssuredSteps.i_should_see_verify_Parameter_of_get()"
 });
 formatter.result({
-  "duration": 41238662,
+  "duration": 44474676,
   "status": "passed"
 });
 formatter.before({
-  "duration": 2161605,
+  "duration": 3087825,
   "status": "passed"
 });
 formatter.scenario({
@@ -188,14 +189,45 @@ formatter.match({
   "location": "TC_RestAssuredSteps.i_perform_GET_operation_for(String)"
 });
 formatter.result({
-  "duration": 10856610,
+  "duration": 13348411,
   "status": "passed"
 });
 formatter.match({
   "location": "TC_RestAssuredSteps.i_should_see_verify_query_Parameter()"
 });
 formatter.result({
-  "duration": 32948587,
+  "duration": 32866958,
   "status": "passed"
+});
+formatter.before({
+  "duration": 2096344,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 20,
+  "name": "Verify post operation",
+  "description": "",
+  "id": "verify-different-get-operations-using-rest-assured;verify-post-operation",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 21,
+  "name": "I perform POST operation for \"/posts\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "/posts",
+      "offset": 30
+    }
+  ],
+  "location": "TC_RestAssuredSteps.i_perform_POST_operation_for(String)"
+});
+formatter.result({
+  "duration": 565342337,
+  "error_message": "java.lang.AssertionError: 1 expectation failed.\nXML path author doesn\u0027t match.\nExpected: a string containing \"hieutran1\"\n  Actual: Error: Insert failed, duplicate id\n    at Function.insert (/usr/local/lib/node_modules/json-server/node_modules/lodash-id/src/index.js:49:18)\n    at /usr/local/lib/node_modules/json-server/node_modules/lodash/lodash.js:4368:28\n    at arrayReduce (/usr/local/lib/node_modules/json-server/node_modules/lodash/lodash.js:683:21)\n    at baseWrapperValue (/usr/local/lib/node_modules/json-server/node_modules/lodash/lodash.js:4367:14)\n    at LodashWrapper.wrapperValue (/usr/local/lib/node_modules/json-server/node_modules/lodash/lodash.js:9050:14)\n    at create (/usr/local/lib/node_modules/json-server/lib/server/router/plural.js:237:48)\n    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/json-server/node_modules/express/lib/router/layer.js:95:5)\n    at next (/usr/local/lib/node_modules/json-server/node_modules/express/lib/router/route.js:137:13)\n    at next (/usr/local/lib/node_modules/json-server/node_modules/express/lib/router/route.js:131:14)\n    at Route.dispatch (/usr/local/lib/node_modules/json-server/node_modules/express/lib/router/route.js:112:3)\n\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)\n\tat io.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:275)\n\tat io.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)\n\tat io.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:258)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:274)\n\tat stepdefinations.RestAssured.BDDStyledMethod.PerformPostWithBodyParameter(BDDStyledMethod.java:72)\n\tat stepdefinations.RestAssured.TC_RestAssuredSteps.i_perform_POST_operation_for(TC_RestAssuredSteps.java:48)\n\tat ✽.Given I perform POST operation for \"/posts\"(GETPosts.feature:21)\n",
+  "status": "failed"
 });
 });

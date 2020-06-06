@@ -8,20 +8,43 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">10</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5,087</td><td></td><td></td></tr>
+<tr><th colspan="8">ExecuteAutomation</th></tr>
+<tr><td><a href="#t0">Window</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,923</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="10">test.postRestAssured</td><td><a href="#m0">test_</a></td><td rowspan="1">1591436269679</td><td rowspan="1">1972</td></tr><tr class="passedeven"><td><a href="#m1">test_01</a></td><td rowspan="1">1591436271655</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m2">test_02_post</a></td><td rowspan="1">1591436271659</td><td rowspan="1">752</td></tr><tr class="passedeven"><td><a href="#m3">test_03_put</a></td><td rowspan="1">1591436272415</td><td rowspan="1">735</td></tr><tr class="passedeven"><td><a href="#m4">test_04_patch</a></td><td rowspan="1">1591436273151</td><td rowspan="1">795</td></tr><tr class="passedeven"><td><a href="#m5">test_05_delete</a></td><td rowspan="1">1591436273948</td><td rowspan="1">715</td></tr><tr class="passedeven"><td><a href="#m6">test_06_post_localhost</a></td><td rowspan="1">1591436274665</td><td rowspan="1">19</td></tr><tr class="passedeven"><td><a href="#m7">test_07_patch_localhost</a></td><td rowspan="1">1591436274685</td><td rowspan="1">14</td></tr><tr class="passedeven"><td><a href="#m8">test_08_put_localhost</a></td><td rowspan="1">1591436274700</td><td rowspan="1">18</td></tr><tr class="passedeven"><td><a href="#m9">test_09_delete_localhost</a></td><td rowspan="1">1591436274720</td><td rowspan="1">13</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">ExecuteAutomation</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Window &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runner.Runner</td><td><a href="#m0">feature</a></td><td rowspan="1">1591438954195</td><td rowspan="1">2541</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">test.postRestAssured#test_</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">test.postRestAssured#test_01</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">test.postRestAssured#test_02_post</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">test.postRestAssured#test_03_put</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">test.postRestAssured#test_04_patch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">test.postRestAssured#test_05_delete</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">test.postRestAssured#test_06_post_localhost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">test.postRestAssured#test_07_patch_localhost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">test.postRestAssured#test_08_put_localhost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">test.postRestAssured#test_09_delete_localhost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Window</h2><h3 id="m0">runner.Runner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Verify different GET operations using Rest-assured</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: java.lang.AssertionError: 1 expectation failed.
+JSON path author doesn&apos;t match.
+Expected: iterable over [&quot;hieutran&quot;, &quot;hieutran&quot;, null] in any order
+  Actual: [hieutran, hieutran, hieutran, hieutran1]
+
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+Caused by: java.lang.AssertionError: 1 expectation failed.
+JSON path author doesn&apos;t match.
+Expected: iterable over [&quot;hieutran&quot;, &quot;hieutran&quot;, null] in any order
+  Actual: [hieutran, hieutran, hieutran, hieutran1]
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at io.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:275)
+	at io.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at io.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:258)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:274)
+	at stepdefinations.RestAssured.BDDStyledMethod.PerformContainsCollection(BDDStyledMethod.java:32)
+	at stepdefinations.RestAssured.TC_RestAssuredSteps.i_should_see_the_author_names(TC_RestAssuredSteps.java:32)
+	at ✽.Then I should see the author names(GETPosts.feature:10)
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

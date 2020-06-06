@@ -42,4 +42,9 @@ public class TC_RestAssuredSteps{
 		BDDStyledMethod.PerformQueryParameter();
 	}
 	
+	
+	@Given("^I perform POST operation for \"([^\"]*)\"$")
+	public void i_perform_POST_operation_for(String arg1) throws Throwable {
+		BDDStyledMethod.PerformPostWithBodyParameter();
+	}
 }

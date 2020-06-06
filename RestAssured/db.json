@@ -9,17 +9,24 @@
   ],
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Selenium by hieutran",
       "author": "hieutran"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Appium by hieutran",
       "author": "hieutran"
     },
     {
-      "id": 21
+      "author": "hieutran",
+      "id": "4",
+      "title": "testPost"
+    },
+    {
+      "author": "hieutran1",
+      "id": "3",
+      "title": "testPost"
     }
   ],
   "comments": [

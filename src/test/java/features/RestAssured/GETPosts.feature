@@ -16,3 +16,6 @@ Feature: Verify different GET operations using Rest-assured
 	Scenario: Verify QueryParameter
     Given I perform GET operation for "/posts"
 		Then I should see verify query Parameter
+		
+	Scenario: Verify post operation
+    Given I perform POST operation for "/posts"
