@@ -5,10 +5,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 import commons.Constants;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -23,51 +26,64 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class Hook {
 	private static WebDriver driver;
 	private static AppiumDriver<MobileElement> driverAppium;
-	
-	 @Before(value = "@Firefox")
-	 public void setUpFirefox() {
-	 System.setProperty("webdriver.gecko.driver", Constants.FIREFOX_PATH_MAC);
-	 driver = new FirefoxDriver();
-	 driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-	 driver.manage().window().maximize();
-	 System.out.println("-----------------Firefox Hook------------------");
-	 }
-	
-	 @Before(value = "@Chrome")
-	 public void setUpChrome() {
-	 System.setProperty("webdriver.chrome.driver", Constants.CHROME_PATH_MAC);
-	 driver = new ChromeDriver();
-	 driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-	 driver.manage().window().maximize();
-	 System.out.println("-----------------Chrome Hook------------------");
-	 }
-	
-	 @Before(value = "@IE")
-	 public void setUpIE() {
-	 System.setProperty("webdriver.ie.driver", Constants.IE_PATH_WIN);
-	 driver = new ChromeDriver();
-	 driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-	 driver.manage().window().maximize();
-	 System.out.println("-----------------IE Hook------------------");
-	 }
-	 
-	 @Before(value = "@AndroidProxi")
-		public void setUpBT() throws MalformedURLException {
-			File app = new File(Constants.APP_PROXI);
-			DesiredCapabilities cap = new DesiredCapabilities();
-			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-			cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S10");
-			cap.setCapability("platformName", "Android");
-			cap.setCapability("app", app.getAbsolutePath());
-			try {
-				driverAppium = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
-			} catch (Exception e) {
-				System.out.println(e.getMessage());
-			}
-			driverAppium.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			System.out.println("-----------------Start Mobile Hook------------------");
+	String baseURL, nodeURL;
+
+	@Before(value = "@ChromeGrid")
+	public void setUpChromeGrid() throws MalformedURLException {
+		nodeURL = "http://192.168.64.2:30001/wd/hub";
+		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		capabilities.setPlatform(Platform.LINUX);
+		driver = new RemoteWebDriver(new URL(nodeURL), capabilities);
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
+		System.out.println("-----------------Chrome Grid Hook------------------");
+	}
+
+	@Before(value = "@Firefox")
+	public void setUpFirefox() throws MalformedURLException {
+		System.setProperty("webdriver.gecko.driver", Constants.FIREFOX_PATH_MAC);
+		driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		System.out.println("-----------------Firefox Hook------------------");
+	}
+
+	@Before(value = "@Chrome")
+	public void setUpChrome(){
+		System.setProperty("webdriver.chrome.driver", Constants.CHROME_PATH_MAC);
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		System.out.println("-----------------Chrome Hook------------------");
+	}
+
+	@Before(value = "@IE")
+	public void setUpIE() {
+		System.setProperty("webdriver.ie.driver", Constants.IE_PATH_WIN);
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		System.out.println("-----------------IE Hook------------------");
+	}
+
+	@Before(value = "@AndroidProxi")
+	public void setUpBT() throws MalformedURLException {
+		File app = new File(Constants.APP_PROXI);
+		DesiredCapabilities cap = new DesiredCapabilities();
+		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S10");
+		cap.setCapability("platformName", "Android");
+		cap.setCapability("app", app.getAbsolutePath());
+		try {
+			driverAppium = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
-	
+		driverAppium.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		System.out.println("-----------------Start Mobile Hook------------------");
+	}
 
 	@Before(value = "@AndroidSwipe")
 	public void setUpAppium() throws MalformedURLException {
@@ -101,7 +117,7 @@ public class Hook {
 		driverAppium.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("-----------------Start Hook------------------");
 	}
-	
+
 	@Before(value = "@Android_API_SMS")
 	public void setUpAppiumAPI_SMS() throws MalformedURLException {
 		File app = new File(Constants.APP_API);
@@ -118,8 +134,7 @@ public class Hook {
 		driverAppium.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("-----------------Start Mobile Hook------------------");
 	}
-	
-	
+
 	@Before(value = "@AndroidSMS")
 	public void setUpAppiumSMS() throws MalformedURLException {
 		DesiredCapabilities cap = new DesiredCapabilities();
@@ -139,10 +154,10 @@ public class Hook {
 		driverAppium.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("-----------------Start Mobile Hook------------------");
 	}
-	
+
 	@Before(value = "@AndroidSC")
 	public void setUpAppiumSC() throws MalformedURLException {
-		
+
 		File app = new File(Constants.APP_SC);
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
@@ -158,52 +173,50 @@ public class Hook {
 		System.out.println("-----------------Start Mobile Hook------------------");
 	}
 
-	
 	@Before(value = "@SimulatorIOS")
 	public void setUpAppiumIOS() throws MalformedURLException {
-		
-		File f=new File(Constants.IOS_PROXIBOXPHARMA_PATH);
-		DesiredCapabilities cap=new DesiredCapabilities();
+
+		File f = new File(Constants.IOS_PROXIBOXPHARMA_PATH);
+		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.1");
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-        cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "13.4");
-        cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 11 Pro");
-        cap.setCapability(MobileCapabilityType.BROWSER_NAME, "");
-        cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 50000);
-        cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
-        cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
+		cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "13.4");
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 11 Pro");
+		cap.setCapability(MobileCapabilityType.BROWSER_NAME, "");
+		cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 50000);
+		cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
+		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
 		try {
-			driverAppium = new IOSDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"),cap);
+			driverAppium = new IOSDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		driverAppium.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		System.out.println("-----------------Start Mobile Hook------------------");
 	}
-	
+
 	@Before(value = "@RealDeviceIOS")
 	public void setUpAppiumRealDeviceIOS() throws MalformedURLException {
-		
-		File f=new File(Constants.IOS_INTERGRATION_PATH);
-		DesiredCapabilities cap=new DesiredCapabilities();
+
+		File f = new File(Constants.IOS_INTERGRATION_PATH);
+		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.1");
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-        cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Thu's iPhone");
-        cap.setCapability(MobileCapabilityType.BROWSER_NAME, "");
-        cap.setCapability("udid","4a9ff9e339526894224e852a24508d49f1037d7a");
-        cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 50000);
-        cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
-        cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Thu's iPhone");
+		cap.setCapability(MobileCapabilityType.BROWSER_NAME, "");
+		cap.setCapability("udid", "4a9ff9e339526894224e852a24508d49f1037d7a");
+		cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 50000);
+		cap.setCapability(MobileCapabilityType.APP, f.getAbsolutePath());
+		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
 		try {
-			driverAppium = new IOSDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"),cap);
+			driverAppium = new IOSDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		driverAppium.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		System.out.println("-----------------Start Mobile Hook------------------");
 	}
-	
-	
+
 	@After(value = "@Firefox, @Chrome")
 	public void closeDriver() {
 		try {
